@@ -25,7 +25,8 @@ import user from './pages/user';
 
 const theme = createMuiTheme(themeFile);
 
-axios.defaults.baseURL = "https://us-central1-socialmonkey-9a0f0.cloudfunctions.net/api";
+axios.defaults.baseURL = "https://us-central1-socialmonkey-9a0f0.cloudfunctions.net/api/";
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 
 const token = localStorage.FBIdToken;
 if (token) {

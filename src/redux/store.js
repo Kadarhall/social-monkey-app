@@ -16,9 +16,9 @@ const reducers = combineReducers({
 })
 
 
-
 const store = createStore(
     reducers,
+    initialState,
     compose(
       applyMiddleware(...middleware),
       window.navigator.userAgent.includes('Chrome') ?

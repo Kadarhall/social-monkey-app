@@ -20,6 +20,8 @@ const styles = (theme) => ({
         textAlign: 'center'
     },
     image: {
+        width: 100,
+        height: 100,
         margin: '20px auto 20px auto'
     },
     pageTitle: {

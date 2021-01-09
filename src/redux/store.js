@@ -15,29 +15,15 @@ const reducers = combineReducers({
     UI: uiReducer
 })
 
-// Only chrome can handle the redux dev tool
-// redux compose cannot handle a null or undefined middleware
-if (window.navigator.userAgent.includes('Chrome')) {
-    var store = createStore(
-      reducers,
-      initialState,
-      compose(
-        applyMiddleware(
-            ...middleware
-        ),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-      )
-    );
-  } else {
-    var store = createStore(
-      reducers,
-      initialState,
-      compose(
-        applyMiddleware(
-          ...middleware
-        )
-      )
-    );
-  }
+
+
+const store = createStore(
+    reducers,
+    compose(
+      applyMiddleware(...middleware),
+      window.navigator.userAgent.includes('Chrome') ?
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() : compose,
+    ),
+  );
 
 export default store;

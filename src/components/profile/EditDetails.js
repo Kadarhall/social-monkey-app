@@ -50,7 +50,8 @@ const styles = (theme) => ({
     },
     button: {
       marginTop: 20,
-      position: 'relative'
+      position: 'relative',
+      float: 'right'
     },
     customError: {
       color: 'red',
@@ -113,9 +114,6 @@ const styles = (theme) => ({
       '& a': {
         margin: '20px 10px'
       }
-    },
-    button: {
-        float: 'right'
     }
 })
 

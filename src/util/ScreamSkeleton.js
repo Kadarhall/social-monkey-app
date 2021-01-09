@@ -8,7 +8,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 
 import withStyles from '@material-ui/core/styles/withStyles';
-import { palette } from '@material-ui/system';
 
 const styles = {
     palette: {
